@@ -1,0 +1,49 @@
+---
+version: "2.1"
+services:
+  emulatorjs:
+    image: lscr.io/linuxserver/emulatorjs:latest
+    container_name: emulatorjs
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Europe/London
+#      - SUBFOLDER=/ #optional
+    volumes:
+      - /opt/retrojs/config:/config
+      - /opt/retrojs/data:/data
+#      - /media/NASSD/Emulation/RetroArch/ROMS/3do:/data/3do/roms
+#      - /media/NASSD/Emulation/RetroArch/ROMS/arcade:/data/arcade/roms
+#      - /media/NASSD/Emulation/RetroArch/ROMS/atari2600:/data/atari2600/roms
+#      - /media/NASSD/Emulation/RetroArch/ROMS/atari7800:/data/atari7800/roms
+#      - /media/NASSD/Emulation/RetroArch/ROMS/colecovision:/data/colecovision/roms
+#      - /media/NASSD/Emulation/RetroArch/ROMS/doom:/data/doom/roms
+#      - /media/NASSD/Emulation/RetroArch/ROMS/gb:/data/gb/roms
+#      - /media/NASSD/Emulation/RetroArch/ROMS/gba:/data/gba/roms
+#      - /media/NASSD/Emulation/RetroArch/ROMS/gbc:/data/gbc/roms
+#      - /media/NASSD/Emulation/RetroArch/ROMS/jaguar:/data/jaguar/roms
+#      - /media/NASSD/Emulation/RetroArch/ROMS/lynx:/data/lynx/roms
+#      - /media/NASSD/Emulation/RetroArch/ROMS/n64:/data/n64/roms
+#      - /media/NASSD/Emulation/RetroArch/ROMS/nds:/data/nds/roms
+#      - /media/NASSD/Emulation/RetroArch/ROMS/nes:/data/nes/roms
+#      - /media/NASSD/Emulation/RetroArch/ROMS/ngp:/data/ngp/roms
+#      - /media/NASSD/Emulation/RetroArch/ROMS/odyssey2:/data/odyssey2/roms
+#      - /media/NASSD/Emulation/RetroArch/ROMS/pce:/data/pce/roms
+#      - /media/NASSD/Emulation/RetroArch/ROMS/psx:/data/psx/roms
+#      - /media/NASSD/Emulation/RetroArch/ROMS/sega32x:/data/sega32x/roms
+#      - /media/NASSD/Emulation/RetroArch/ROMS/segaCD:/data/segaCD/roms
+#      - /media/NASSD/Emulation/RetroArch/ROMS/segaGG:/data/segaGG/roms
+#      - /media/NASSD/Emulation/RetroArch/ROMS/segaMD:/data/segaMD/roms
+#      - /media/NASSD/Emulation/RetroArch/ROMS/segaMS:/data/segaMS/roms
+#      - /media/NASSD/Emulation/RetroArch/ROMS/segaSaturn:/data/segaSaturn/roms
+#      - /media/NASSD/Emulation/RetroArch/ROMS/segaSG:/data/segaSG/roms
+#      - /media/NASSD/Emulation/RetroArch/ROMS/snes:/data/snes/roms
+#      - /media/NASSD/Emulation/RetroArch/ROMS/vb:/data/vb/roms
+#      - /media/NASSD/Emulation/RetroArch/ROMS/vectrex:/data/vectrex/roms
+#      - /media/NASSD/Emulation/RetroArch/ROMS/ws:/data/ws/roms
+
+    ports:
+      - 3000:3000
+      - 80:80
+      - 4001:4001 #optional
+    restart: unless-stopped
