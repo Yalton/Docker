@@ -1,0 +1,17 @@
+---
+version: "2.1"
+services:
+  plex:
+    image: lscr.io/linuxserver/plex:latest
+    container_name: plex
+    network_mode: host
+    environment:
+      - PUID=1004
+      - PGID=1004
+      - VERSION=docker
+      - PLEX_CLAIM= #optional
+    volumes:
+      - /opt/plex/Config:/config
+      - /opt/plex/data/Tv_shows:/tv
+      - /opt/plex/data/Movies:/movies
+    restart: unless-stopped
