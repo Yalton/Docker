@@ -11,7 +11,7 @@ services:
       - PGID=1004
       - TZ=America/LosAngeles
     volumes:
-      - /opt/transmission/wireguard/config:/config
+      - /opt/transmission/data/wireguard/config:/config
       - /lib/modules:/lib/modules
     ports:
       - 51820:51820/udp
@@ -32,8 +32,8 @@ services:
       - USER=yalt
       - PASS=vbsqMS9sqPFUKPhzfyeH7E4NA
     volumes:
-      - /opt/transmission/config:/config
-      - /opt/transmission/downloads:/downloads
+      - /opt/transmission/conf:/config
+      - /opt/transmission/data/downloads:/downloads
     depends_on:
       - wireguard
     network_mode: service:wireguard

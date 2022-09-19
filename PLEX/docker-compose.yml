@@ -11,7 +11,7 @@ services:
       - VERSION=docker
       - PLEX_CLAIM= #optional
     volumes:
-      - /opt/plex/Config:/config
-      - /opt/plex/data/Tv_shows:/tv
-      - /opt/plex/data/Movies:/movies
+      - /opt/plex/config:/config
+      - /opt/plex/data/media/Tv_shows:/tv
+      - /opt/plex/data/media/Movies:/movies
     restart: unless-stopped
