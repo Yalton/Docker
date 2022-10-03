@@ -29,8 +29,8 @@ services:
       - PGID=1004
       - TZ=America/LosAngeles
       - TRANSMISSION_WEB_HOME=/combustion-release/
-      - USER=yalt
-      - PASS=vbsqMS9sqPFUKPhzfyeH7E4NA
+      - USER=${user}
+      - PASS=${password}
     volumes:
       - /opt/transmission/conf:/config
       - /opt/transmission/data/downloads:/downloads
