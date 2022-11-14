@@ -1,6 +1,6 @@
 # Docker containers
 
-![docker](docker.png)
+![docker](docker.jpg)
 
 ## About
 
