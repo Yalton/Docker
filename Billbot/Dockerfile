@@ -1,8 +1,8 @@
 #Bertbot (Dockerfile)
 FROM python:3
 
-WORKDIR /media/NASSD/Mainframe/billbot:/usr/src/app
+WORKDIR .:/usr/src/app
 
-RUN pip install -U discord.py
+RUN pip install -R requirements.txt
 
 CMD [ "python", "./bot.py" ]
